@@ -56,19 +56,14 @@ QUESTION_ANSWER = [
   {question: "what is i", answer: "i"},
   {question: "what is j", answer: "j"}
 ]
-  i = 1
-  qQuestion = QUESTION_ANSWER[i].question
-  $(".question").html(qQuestion)
-// QUIZ_QA[0].question
-// QUIZ_QA[0].answer
+i = 4
+$(".question").html(QUESTION_ANSWER[i].question)
+
 QUIZ_QA = $(".button").on("click", function(){
   // for (i = 0; i < QUESTION_ANSWER.length; i ++) {
 
-
-  qAnswer = QUESTION_ANSWER[i].answer
-
-  var userInput = $(".input").val()
-  if (userInput === qAnswer) {
+  // var userInput = $(".input").val()
+  if ($(".input").val() === QUESTION_ANSWER[i].answer) {
     console.log("Correct");
     $(".answer").html("Correct")
   } else {
