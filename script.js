@@ -7,8 +7,6 @@ create dynamic questions. Use */
 
 let QUIZ_QA;
 let QUESTION_ANSWER;
-var qQuestion;
-var qAnswer;
 
 // .ready prevents functions from running until after html loads
 $(document).ready(function(){
@@ -56,23 +54,22 @@ QUESTION_ANSWER = [
   {question: "what is i", answer: "i"},
   {question: "what is j", answer: "j"}
 ]
-i = 4
+i = 0
 $(".question").html(QUESTION_ANSWER[i].question)
 
 QUIZ_QA = $(".button").on("click", function(){
-  // for (i = 0; i < QUESTION_ANSWER.length; i ++) {
-
-  // var userInput = $(".input").val()
   if ($(".input").val() === QUESTION_ANSWER[i].answer) {
-    console.log("Correct");
     $(".answer").html("Correct")
+    i += 1
+    $(".question").html(QUESTION_ANSWER[i].question)
   } else {
-    console.log("Please Try Again");
     $(".answer").html("Incorrect, Please try again")
   }
-// }
 })
-// let answer = QUIZ_QA.filter((answer))
+
+// for (i = 0; i < QUESTION_ANSWER.length; i ++) {
+//
+// }
 
 // for (i = 0; i < QUESTION_ANSWER.length; i ++) {
 //   console.log("Answer is " + answer[i])
