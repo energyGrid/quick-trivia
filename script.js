@@ -7,12 +7,15 @@ create dynamic questions. Use */
 
 let QUIZ_QA;
 let QUESTION_ANSWER;
+var finalTime;
+var tickTock;
+var userTime;
 
 // .ready prevents functions from running until after html loads
 $(document).ready(function(){
 $(".quiz").hide();
 
-var tickTock = 0
+tickTock = 0
 var timeCounter = function(){
   tickTock++
   $(".scoreKeeper").html(tickTock)
@@ -20,7 +23,7 @@ var timeCounter = function(){
 
 $(".startButton").click(function(){
   $(".quiz").show();
-var userTime = setInterval(timeCounter, 1000)
+  userTime = setInterval(timeCounter, 1000)
 })
 
 QUESTION_ANSWER = [
@@ -53,19 +56,22 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
     $(".nextQuestion").show()
     $(".scoreKeeper").html()
     if ($(".inputField").val() === QUESTION_ANSWER[QUESTION_ANSWER.length - 1].answer) {
-      alert("You Won!")
+      console.log("You Won!")
+      finalTime = tickTock
+      clearInterval(userTime)
+      console.log(userTime)
+      console.log(finalTime)
     }
     $(".nextQuestion").on("click", function() {
         $(".question").html(QUESTION_ANSWER[i].question)
         $(".questionNum").html("Question Number: " + (i + 1))
-        $(".iputField").val("")
+        $(".inputField").val("")
         $(".answerButton").show()
         $(".nextQuestion").hide()
     })
   } else {
     $(".answer").html("Incorrect, Please try again")
   }
-  // return false;
 })
 
 });
