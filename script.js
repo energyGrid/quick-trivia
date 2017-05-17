@@ -10,37 +10,10 @@ let QUESTION_ANSWER;
 
 // .ready prevents functions from running until after html loads
 $(document).ready(function(){
-// $(".qOne").hide();
-// $(".qTwo").hide();
-// $(".startButton").click(function(){
-//   $(".qOne").show();
-// })
-
-// var QuestionOne = $(".buttonOne").on("click", function(){
-//   var userInput = $(".inputOne").val()
-//   var answer = "aa";
-//   if (userInput === answer) {
-//     console.log("Correct");
-//     $(".answer").html("Correct")
-//     $(".qTwo").show();
-//   } else {
-//     console.log("Please Try Again");
-//     $(".answerOne").html("Incorrect, Please try again")
-//   }
-// })
-//
-// var QuestionTwo = $(".buttonTwo").on("click", function(){
-//     var userInput = $(".inputTwo").val()
-//     var answer = "bb";
-//     if (userInput === answer) {
-//       console.log("Correct");
-//       $(".answerTwo").html("Correct")
-//       $(".qTwo").show();
-//     } else {
-//       console.log("Please Try Again");
-//       $(".answerTwo").html("Incorrect, Please try again")
-//     }
-// })
+$(".quiz").hide();
+$(".startButton").click(function(){
+  $(".quiz").show();
+})
 
 QUESTION_ANSWER = [
   {question: "What is a", answer: "a", hint: "alphabet a"},
@@ -56,6 +29,8 @@ QUESTION_ANSWER = [
 ]
 i = 0
 $(".question").html(QUESTION_ANSWER[i].question)
+$(".questionNum").html("Question Number: " + (i + 1))
+
 $(".hintButton").on("click", function(){
     $(".questionHint").html(QUESTION_ANSWER[i].hint)
 })
@@ -64,8 +39,6 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
   e.preventDefault();
   if ($(".inputField").val() === QUESTION_ANSWER[i].answer) {
     $(".answer").html("Correct")
-    console.log(".answer")
-    console.log($(".inputField"))
     i += 1
     $(".question").html(QUESTION_ANSWER[i].question)
   } else {
@@ -74,15 +47,6 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
   }
   // return false;
 })
-
-// for (i = 0; i < QUESTION_ANSWER.length; i ++) {
-//
-// }
-
-// for (i = 0; i < QUESTION_ANSWER.length; i ++) {
-//   console.log("Answer is " + answer[i])
-// }
-
 
 
 });
