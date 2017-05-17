@@ -39,11 +39,16 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
   e.preventDefault();
   if ($(".inputField").val() === QUESTION_ANSWER[i].answer) {
     $(".answer").html("Correct")
+    $(".answerButton").hide();
     i += 1
-    $(".question").html(QUESTION_ANSWER[i].question)
+    $(".nextQuestion").on("click", function() {
+      $(".question").html(QUESTION_ANSWER[i].question)
+      $(".questionNum").html("Question Number: " + (i + 1))
+      $(".iputField").val("")
+      $(".answerButton").show();
+    })
   } else {
     $(".answer").html("Incorrect, Please try again")
-    // $(".iputField").val("")
   }
   // return false;
 })
