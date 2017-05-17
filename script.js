@@ -43,9 +43,9 @@ $(document).ready(function(){
 // })
 
 QUESTION_ANSWER = [
-  {question: "What is a", answer: "a"},
-  {question: "what is b", answer: "b"},
-  {question: "what is c", answer: "c"},
+  {question: "What is a", answer: "a", hint: "alphabet a"},
+  {question: "what is b", answer: "b", hint: "alphabet b"},
+  {question: "what is c", answer: "c", hint: "alphabet c"},
   {question: "what is d", answer: "d"},
   {question: "what is e", answer: "e"},
   {question: "What is f", answer: "f"},
@@ -56,15 +56,23 @@ QUESTION_ANSWER = [
 ]
 i = 0
 $(".question").html(QUESTION_ANSWER[i].question)
+$(".hintButton").on("click", function(){
+    $(".questionHint").html(QUESTION_ANSWER[i].hint)
+})
 
-QUIZ_QA = $(".button").on("click", function(){
-  if ($(".input").val() === QUESTION_ANSWER[i].answer) {
+QUIZ_QA = $(".answerButton").on("click", function(e){
+  e.preventDefault();
+  if ($(".inputField").val() === QUESTION_ANSWER[i].answer) {
     $(".answer").html("Correct")
+    console.log(".answer")
+    console.log($(".inputField"))
     i += 1
     $(".question").html(QUESTION_ANSWER[i].question)
   } else {
     $(".answer").html("Incorrect, Please try again")
+    // $(".iputField").val("")
   }
+  // return false;
 })
 
 // for (i = 0; i < QUESTION_ANSWER.length; i ++) {
