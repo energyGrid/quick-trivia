@@ -7,24 +7,27 @@ create dynamic questions. Use */
 
 let QUIZ_QA;
 let QUESTION_ANSWER;
-var finalTime;
+var bestTime = localStorage.getItem("bestTime", bestTime)
+var userName = localStorage.getItem("userName", userName)
 var tickTock;
 var userTime;
 
 // .ready prevents functions from running until after html loads
 $(document).ready(function(){
 $(".quiz").hide();
-
+if (userName != null) {
+$(".bestTime").html(userName + " completed the quiz in " + bestTime + " seconds.")
+};
 tickTock = 0
 var timeCounter = function(){
   tickTock++
-  $(".scoreKeeper").html(tickTock)
-}
+  $(".scoreKeeper").html("Timer " + tickTock)
+};
 
 $(".startButton").click(function(){
   $(".quiz").show();
   userTime = setInterval(timeCounter, 1000)
-})
+});
 
 QUESTION_ANSWER = [
   {question: "What is a", answer: "a", hint: "alphabet a"},
@@ -45,6 +48,9 @@ $(".nextQuestion").hide()
 
 $(".hintButton").on("click", function(){
     $(".questionHint").html(QUESTION_ANSWER[i].hint)
+});
+$(".restartQuiz").on("click", function(){
+  location.reload();
 })
 
 QUIZ_QA = $(".answerButton").on("click", function(e){
@@ -56,11 +62,11 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
     $(".nextQuestion").show()
     $(".scoreKeeper").html()
     if ($(".inputField").val() === QUESTION_ANSWER[QUESTION_ANSWER.length - 1].answer) {
-      console.log("You Won!")
-      finalTime = tickTock
+      bestTime = tickTock.toString()
+      localStorage.setItem("bestTime", bestTime)
       clearInterval(userTime)
-      console.log(userTime)
-      console.log(finalTime)
+      userName = prompt("You're an Energy Champ! Please enter your name to show off your time.")
+      localStorage.setItem("userName", userName)
     }
     $(".nextQuestion").on("click", function() {
         $(".question").html(QUESTION_ANSWER[i].question)
@@ -72,6 +78,6 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
   } else {
     $(".answer").html("Incorrect, Please try again")
   }
-})
+});
 
 });
