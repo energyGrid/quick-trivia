@@ -30,7 +30,7 @@ $(".startButton").click(function(){
 });
 
 QUESTION_ANSWER = [
-  {question: "Where is the largest wind turbine in the world? [USA or Denmark]", answer: "Denmark", hint: "The Vestas V164 has a rated capacity of 8 MW, has an overall height of 220 m (722 ft), a diameter of 164 m (538 ft), is for offshore use, and is the world's largest-capacity wind turbine since its introduction in 2014."},
+  {question: "Where is the largest wind turbine in the world? [USA or Denmark]", answer: "Denmark", hint: "The Vestas V164 has a rated capacity of 8 MW, has an overall height of 220 m (722 ft), a diameter of 164 m (538 ft), is for offshore use."},
   {question: "Which sector produces more CO2? a: Transportation or b: Electricity and Heat Production [a/b]", answer: "b", hint: "It's not cars"},
   {question: "Does the burning of fossil fuels produce CO2 and Acid Rain? [yes/no]", answer: "yes", hint: "It's the worst"},
   {question: "___ is heat from within the earth which can be used to heat buildings or generate electricity. [geothermal energy/nuclear energy]", answer: "geothermal energy", hint: "Think dirty"},
