@@ -87,3 +87,9 @@ QUIZ_QA = $(".answerButton").on("click", function(e){
 });
 
 });
+
+// FEEDBACK
+
+// Really good and dry coding. Good way to put all questions, answers and hints together.
+// Good DOM using, event listeners and functions.
+// I also liked localStorage using. I want to add it to my game too :)
