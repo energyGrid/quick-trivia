@@ -1,63 +1,156 @@
 body {
-  background: #a3abb7;
+  background-color: black;
+  background-image: url("westboundary-photography-chris-gill-60179.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-size: 62.5%;
   display: grid;
   align-content: start;
-  grid-template-columns: 100px auto 100px 100px;
-  grid-template-rows: 20% 100px 100px 100px auto;
+  grid-template-columns: auto 100px;
+  grid-template-rows: 20% 450px auto;
   grid-gap: 10px 5px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 .quizHeader {
-   grid-column: 1 / 4;
+   grid-column: 1 / 2;
    grid-row: 1 / 2;
-   border-style: solid;
+   text-align: center;
+   font-size: 3em;
+   padding: 0px;
+   margin: 0px;
+   background-image: url("wind-energy-logo.png");
+   background-size: contain;
+   background-repeat: no-repeat;
 }
-.quizAside{
-  grid-column: 4 / 5;
-  grid-row: 1 / 5;
-  border-style: solid;
-}
-footer {
-  grid-column: 1 / 5;
-  grid-row: 5 / 6;
-  border-style: solid;
-}
-.quiz {
-  background: #a3abb7;
-  display: grid;
-  align-content: start;
-  grid-template-columns: 100px auto 100px;
-  grid-template-rows: 100px 100px 100px;
-}
-.questionNum {
+.startButton {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   border-style: solid;
+  text-align: center;
+  margin: 1px;
+  padding: 2px 100px;
+  color: white;
+  background: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 500;
+}
+h1 {
+  margin: 1px;
+  padding: 2px 100px;
+  text-shadow: -3px -3px 30px black;
+}
+.quizAside{
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  align-self: end;
+}
+footer {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+  margin: 2px;
+  padding: 2px;
+}
+.quiz {
+  display: grid;
+  align-content: start;
+  grid-template-columns: 100px auto 100px;
+  grid-template-rows: 100px 150px 150px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.answerForm{
+  display: grid;
+  align-content: start;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.questionNum {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 .scoreKeeper {
   grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  border-style: solid;
+  grid-row: 1 / 2;
 }
 .question {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+}
+.checkAnswerField {
+  background: white;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 75px 75px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.answerButton {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background: red;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+}
+.inputField {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-style: solid;
+}
+.answer {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   border-style: solid;
 }
-.checkAnswerField {
-  border-style: solid;
-}
 .nextQuestion {
-  border-style: solid;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  background: red;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
 }
 .hintButton {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  border-style: solid;
+  grid-row: 3 / 4;
+  background: red;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
 }
 .questionHint {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
   border-style: solid;
 }
 .restartQuiz {
-  border-style: solid;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  background: red;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
 }
