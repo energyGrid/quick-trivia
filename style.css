@@ -7,7 +7,7 @@ body {
   display: grid;
   align-content: start;
   grid-template-columns: auto 100px;
-  grid-template-rows: 20% 450px auto;
+  grid-template-rows: 20% 400px 200px;
   grid-gap: 10px 5px;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -27,6 +27,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   border-style: solid;
+  border-color: yellow;
   text-align: center;
   margin: 1px;
   padding: 2px 100px;
@@ -62,9 +63,8 @@ footer {
 }
 .quiz {
   display: grid;
-  align-content: start;
   grid-template-columns: 100px auto 100px;
-  grid-template-rows: 100px 150px 150px;
+  grid-template-rows: 100px 150px 100px;
   background: rgba(255,255,255,0.5);
   border-radius: 10px;
   font-size: 2em;
@@ -77,31 +77,53 @@ footer {
 .answerForm{
   display: grid;
   align-content: start;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 100px 300px;
   grid-template-rows: 100px 100px;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
-}
-.questionNum {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-.scoreKeeper {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  text-align: center;
 }
 .question {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
   text-align: center;
+  padding: 10px;
+}
+.question span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.questionNum {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: yellow;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  text-shadow: -2px -2px 10px grey;
+}
+.scoreKeeper {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  color: yellow;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  text-shadow: -2px -2px 10px grey;
 }
 .checkAnswerField {
-  background: white;
   display: grid;
-  grid-template-columns: 100px auto;
-  grid-template-rows: 75px 75px;
+  grid-template-columns: 100px 300px;
+  grid-template-rows: 75px 60px;
   grid-column-gap: 10px;
   grid-row-gap: 15px;
+  align-content: center;
 }
 .answerButton {
   grid-column: 1 / 2;
@@ -111,16 +133,25 @@ footer {
   font-size: 1em;
   font-weight: 600;
   text-align: center;
+  border-radius: 5px;
 }
 .inputField {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  border-style: solid;
+  color: black;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 5px;
 }
 .answer {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  border-style: solid;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
 }
 .nextQuestion {
   grid-column: 3 / 4;
@@ -130,27 +161,45 @@ footer {
   font-size: 1em;
   font-weight: 600;
   text-align: center;
+  border-radius: 5px;
 }
 .hintButton {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  background: red;
+  background: #43cc55;
   color: white;
   font-size: 1em;
   font-weight: 600;
   text-align: center;
+  border-radius: 5px;
 }
 .questionHint {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  border-style: solid;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
 }
 .restartQuiz {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
-  background: red;
+  background: #43cc55;
   color: white;
   font-size: 1em;
   font-weight: 600;
   text-align: center;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 638px) {
+    .quizHeader {
+       font-size: 2em;
+       padding: 0px;
+       margin: 0px;
+       background-image: url("wind-energy-logo.png");
+       background-size: contain;
+       background-repeat: no-repeat;
+    }
 }

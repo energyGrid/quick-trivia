@@ -30,19 +30,19 @@ $(".startButton").click(function(){
 });
 
 QUESTION_ANSWER = [
-  {question: "What is a", answer: "a", hint: "alphabet a"},
-  {question: "what is b", answer: "b", hint: "alphabet b"},
-  {question: "what is c", answer: "c", hint: "alphabet c"},
-  // {question: "what is d", answer: "d"},
-  // {question: "what is e", answer: "e"},
-  // {question: "What is f", answer: "f"},
+  {question: "Where is the largest wind turbine in the world? [USA or Denmark]", answer: "Denmark", hint: "The Vestas V164 has a rated capacity of 8 MW, has an overall height of 220 m (722 ft), a diameter of 164 m (538 ft), is for offshore use, and is the world's largest-capacity wind turbine since its introduction in 2014."},
+  {question: "Which sector produces more CO2? a: Transportation or b: Electricity and Heat Production [a/b]", answer: "b", hint: "It's not cars"},
+  {question: "Does the burning of fossil fuels produce CO2 and Acid Rain? [yes/no]", answer: "yes", hint: "It's the worst"},
+  {question: "___ is heat from within the earth which can be used to heat buildings or generate electricity. [geothermal energy/nuclear energy]", answer: "geothermal energy", hint: "Think dirty"},
+  {question: "The energy saved by recycling one aluminium drink can is enough to run a TV for how many minutes? [30, 60, 180, 200]", answer: "180", hint: "Not 1 or 2 hours, but... "},
+  {question: "The amount of energy poured onto the Earth by the Sun every 15 minutes is equivalent to what? The entire world's enery for a ____. [hour,day, month, year]", answer: "year", hint: "A really long time"},
   // {question: "what is g", answer: "g"},
   // {question: "what is h", answer: "h"},
   // {question: "what is i", answer: "i"},
   // {question: "what is j", answer: "j"}
 ]
 i = 0
-$(".question").html(QUESTION_ANSWER[i].question)
+$(".question").html("<span>" + QUESTION_ANSWER[i].question + "</span>")
 $(".questionNum").html("Question Number: " + (i + 1))
 $(".nextQuestion").hide()
 
