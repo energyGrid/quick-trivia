@@ -18,7 +18,8 @@ Unsolved problems:
 -Would like to see a list of questions and answers at the end of the quiz.
 
 
-*** General Assembly Necessary Deliverables
+***
+General Assembly Necessary Deliverables
 
 Self-scoring Trivia
 
