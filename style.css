@@ -98,7 +98,9 @@ footer {
   margin: 10px 0 0 15%;
 }
 .answerButton {
-  background: red;
+  background: -webkit-linear-gradient(top left, red, yellow);
+  background: -o-linear-gradient(top left, red, yellow);
+  background: linear-gradient(to bottom right, red, yellow);
   color: white;
   font-size: 1em;
   font-weight: 600;
@@ -118,7 +120,9 @@ footer {
   padding: 15px;
 }
 .nextQuestion {
-  background: red;
+  background: -webkit-linear-gradient(top left, red, yellow);
+  background: -o-linear-gradient(top left, red, yellow);
+  background: linear-gradient(to bottom right, red, yellow);
   color: white;
   font-size: 1em;
   font-weight: 600;
@@ -140,7 +144,9 @@ footer {
   border-color: yellow;
 }
 .hintButton {
-  background: #43cc55;
+  background: -webkit-linear-gradient(top right, #43cc55, yellow);
+  background: -o-linear-gradient(top right, #43cc55, yellow);
+  background: linear-gradient(to bottom left, #43cc55, yellow);
   color: white;
   font-size: 1em;
   font-weight: 600;
@@ -160,7 +166,9 @@ footer {
   margin: 15px auto;
 }
 .restartQuiz {
-  background: #43cc55;
+  background: -webkit-linear-gradient(top left, #43cc55, yellow);
+  background: -o-linear-gradient(top left, #43cc55, yellow);
+  background: linear-gradient(to bottom right, #43cc55, yellow);
   color: white;
   font-size: 1em;
   font-weight: 600;
