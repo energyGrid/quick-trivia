@@ -60,7 +60,8 @@ $(document).ready(function(){
   //e prevents page from refreshing
   QUIZ_QA = $(".answerButton").on("click", function(e){
     e.preventDefault();
-    if ($(".inputField").val() === QUESTION_ANSWER[i].answer) {
+    if ($(".inputField").val().toLowerCase() === QUESTION_ANSWER[i].answer.toLowerCase()) {
+      $(".answer").show()
       $(".answer").html("Correct")
       $(".answerButton").hide()
       i += 1
@@ -80,8 +81,10 @@ $(document).ready(function(){
         $(".inputField").val("")
         $(".answerButton").show()
         $(".nextQuestion").hide()
+        $(".answer").hide()
       })
     } else {
+      $(".answer").show()
       $(".answer").html("Incorrect, Please try again")
     }
   });
