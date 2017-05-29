@@ -8,7 +8,7 @@
 ## Technical Requirements
 
 **3: Excelling**
-> App functions with minimal or no errors. You definitely pushed yourself on this, including timers.
+> App functions with minimal or no errors. You definitely pushed yourself on this, including timers. As an additional feature, I'd add scoring to show the number of right and wrong. 
 
 ## Code Quality
 
@@ -25,4 +25,4 @@ Is there a better way to create a timer than using setInterval()?
 ## Creativity and Interface
 
 **3: Excelling**
-> The app displays a personal spin or creative element through its written language, functionality, purpose, and/or CSS. The animation on the stones is really cool and definitely. The design is really user-friendly and aesthetically pleasing. One thought might be to style the dropdown when selecting the number of stones. The default one in't too great.  
+> The app displays a personal spin or creative element through its written language, functionality, purpose, and/or CSS. The design is really user-friendly and aesthetically pleasing.
